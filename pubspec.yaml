@@ -1,0 +1,59 @@
+name: horsly_bit
+description: "A new Flutter project."
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.17
+  smooth_page_indicator: ^1.2.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+    - family: AeonikTRIAL
+      fonts:
+        - asset: assets/fonts/AeonikTRIAL-Bold.otf
+          weight: 700
+        - asset: assets/fonts/AeonikTRIAL-BoldItalic.otf
+          weight: 700
+          style: italic
+        - asset: assets/fonts/AeonikTRIAL-Regular.otf
+          weight: 400
+        - asset: assets/fonts/AeonikTRIAL-RegularItalic.otf
+          weight: 400
+          style: italic
+        - asset: assets/fonts/AeonikTRIAL-Light.otf
+          weight: 300
+        - asset: assets/fonts/AeonikTRIAL-LightItalic.otf
+          weight: 300
+          style: italic
+flutter_assets:
+  assets_path: assets/images
+  output_path: lib/core/assets_path/
+  filename: image_path.dart
+  field_prefix: null
+  classname: ImagePath
+# flutter_assets:
+#   assets_path: assets/icons
+#   output_path: lib/core/assets_path/
+#   filename: icons_path.dart
+#   field_prefix: null
+#   classname: IconsPath
