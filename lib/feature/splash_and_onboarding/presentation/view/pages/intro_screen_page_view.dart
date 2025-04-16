@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:horsly_bit/core/utils/helper_functions.dart';
 import 'package:horsly_bit/core/utils/sized_box_extension.dart';
 import 'package:horsly_bit/core/widgets/main_app_button.dart';
+import 'package:horsly_bit/feature/auth/register/presentation/view/pages/register_page_view.dart';
 import 'package:horsly_bit/feature/splash_and_onboarding/data/welcome_sentences_model.dart';
 import 'package:horsly_bit/feature/splash_and_onboarding/presentation/view/widgets/back_ground_image.dart';
 import 'package:horsly_bit/feature/splash_and_onboarding/presentation/view/widgets/body_text_section.dart';
@@ -76,7 +78,12 @@ class _IntroScreenPageViewState extends State<IntroScreenPageView> {
                         duration: const Duration(milliseconds: 300),
                         curve: Curves.easeInOut,
                       );
-                    } else {}
+                    } else {
+                      HelperFunctions.navigateToScreenAndRemove(
+                        context,
+                        (context) => const RegisterPageView(),
+                      );
+                    }
                   },
                   text: _currentIndex == welcomeSentencesList.length - 2
                       ? "Get Started"

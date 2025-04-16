@@ -40,7 +40,29 @@ class AppTextStyle {
       const TextStyle(
         color: AppColors.blackAppColor,
         fontSize: 16,
-        fontWeight: FontWeight.w500,
+        fontWeight: FontWeight.w600,
+      ),
+    );
+  }
+
+  static TextStyle style20w600Black(context) {
+    return getCustomTextStyle(
+      context,
+      const TextStyle(
+        color: AppColors.blackAppColor,
+        fontSize: 20,
+        fontWeight: FontWeight.w600,
+      ),
+    );
+  }
+
+  static TextStyle style16w400Black(context) {
+    return getCustomTextStyle(
+      context,
+      const TextStyle(
+        color: AppColors.blackAppColor,
+        fontSize: 16,
+        fontWeight: FontWeight.w400,
       ),
     );
   }

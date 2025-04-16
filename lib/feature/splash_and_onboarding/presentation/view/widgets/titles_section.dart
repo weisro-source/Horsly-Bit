@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:horsly_bit/core/theme/text_style.dart';
-import 'package:horsly_bit/feature/splash_and_onboarding/data/welcome_sentences_model.dart';
 
 class TitlesTextSection extends StatelessWidget {
   const TitlesTextSection({
