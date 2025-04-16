@@ -25,10 +25,33 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyHaveAccount": MessageLookupByLibrary.simpleMessage(
       "I already have an account",
     ),
+    "atLeastOneLetter": MessageLookupByLibrary.simpleMessage(
+      "At least 1 letter",
+    ),
+    "atLeastOneNumber": MessageLookupByLibrary.simpleMessage(
+      "At least 1 number",
+    ),
+    "atLeastOneSpecialChar": MessageLookupByLibrary.simpleMessage(
+      "At least 1 special character",
+    ),
     "continueButton": MessageLookupByLibrary.simpleMessage("Continue"),
     "createAccount": MessageLookupByLibrary.simpleMessage("Create account"),
+    "createStrongPassword": MessageLookupByLibrary.simpleMessage(
+      "Create a strong password",
+    ),
     "enterEmailAddress": MessageLookupByLibrary.simpleMessage(
       "Enter the email address you want to use.",
+    ),
+    "enterPassword": MessageLookupByLibrary.simpleMessage("Enter password"),
+    "generatePassword": MessageLookupByLibrary.simpleMessage(
+      "Generate password",
+    ),
+    "min15Characters": MessageLookupByLibrary.simpleMessage(
+      "Minimum 15 characters",
+    ),
+    "password": MessageLookupByLibrary.simpleMessage("Password"),
+    "passwordRequirements": MessageLookupByLibrary.simpleMessage(
+      "Password must contain:",
     ),
     "yourEmail": MessageLookupByLibrary.simpleMessage("Your Email"),
   };

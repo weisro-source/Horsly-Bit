@@ -3,5 +3,14 @@
     "enterEmailAddress": "Enter the email address you want to use.",
     "yourEmail": "Your Email",
     "continueButton": "Continue",
-    "alreadyHaveAccount": "I already have an account"
+    "alreadyHaveAccount": "I already have an account",
+    "password": "Password",
+    "createStrongPassword": "Create a strong password",
+    "enterPassword": "Enter password",
+    "passwordRequirements": "Password must contain:",
+    "generatePassword": "Generate password",
+    "min15Characters": "Minimum 15 characters",
+    "atLeastOneLetter": "At least 1 letter",
+    "atLeastOneNumber": "At least 1 number",
+    "atLeastOneSpecialChar": "At least 1 special character"
 }

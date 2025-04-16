@@ -12,13 +12,24 @@ class AppTextStyle {
     return textStyle.copyWith(fontFamily: fontFamily);
   }
 
-  static TextStyle style32w500White(context) {
+  static TextStyle style14w400secondaryGray(context) {
     return getCustomTextStyle(
       context,
       const TextStyle(
-        color: AppColors.whiteColor,
-        fontSize: 32,
-        fontWeight: FontWeight.w500,
+        color: AppColors.secondaryGrayAppColor,
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+      ),
+    );
+  }
+
+  static TextStyle style15w600Black(context) {
+    return getCustomTextStyle(
+      context,
+      const TextStyle(
+        color: AppColors.blackAppColor,
+        fontSize: 15,
+        fontWeight: FontWeight.w600,
       ),
     );
   }
@@ -45,6 +56,17 @@ class AppTextStyle {
     );
   }
 
+  static TextStyle style16w400Black(context) {
+    return getCustomTextStyle(
+      context,
+      const TextStyle(
+        color: AppColors.blackAppColor,
+        fontSize: 16,
+        fontWeight: FontWeight.w400,
+      ),
+    );
+  }
+
   static TextStyle style20w600Black(context) {
     return getCustomTextStyle(
       context,
@@ -56,13 +78,13 @@ class AppTextStyle {
     );
   }
 
-  static TextStyle style16w400Black(context) {
+  static TextStyle style32w500White(context) {
     return getCustomTextStyle(
       context,
       const TextStyle(
-        color: AppColors.blackAppColor,
-        fontSize: 16,
-        fontWeight: FontWeight.w400,
+        color: AppColors.whiteColor,
+        fontSize: 32,
+        fontWeight: FontWeight.w500,
       ),
     );
   }

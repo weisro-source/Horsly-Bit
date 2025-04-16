@@ -94,6 +94,91 @@ class S {
       args: [],
     );
   }
+
+  /// `Password`
+  String get password {
+    return Intl.message('Password', name: 'password', desc: '', args: []);
+  }
+
+  /// `Create a strong password`
+  String get createStrongPassword {
+    return Intl.message(
+      'Create a strong password',
+      name: 'createStrongPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter password`
+  String get enterPassword {
+    return Intl.message(
+      'Enter password',
+      name: 'enterPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must contain:`
+  String get passwordRequirements {
+    return Intl.message(
+      'Password must contain:',
+      name: 'passwordRequirements',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Generate password`
+  String get generatePassword {
+    return Intl.message(
+      'Generate password',
+      name: 'generatePassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Minimum 15 characters`
+  String get min15Characters {
+    return Intl.message(
+      'Minimum 15 characters',
+      name: 'min15Characters',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At least 1 letter`
+  String get atLeastOneLetter {
+    return Intl.message(
+      'At least 1 letter',
+      name: 'atLeastOneLetter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At least 1 number`
+  String get atLeastOneNumber {
+    return Intl.message(
+      'At least 1 number',
+      name: 'atLeastOneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `At least 1 special character`
+  String get atLeastOneSpecialChar {
+    return Intl.message(
+      'At least 1 special character',
+      name: 'atLeastOneSpecialChar',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

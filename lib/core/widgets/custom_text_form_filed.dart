@@ -27,7 +27,8 @@ class CustomTextFormFiled extends StatelessWidget {
       this.fillColor = AppColors.lightGrayAppColor,
       this.filled = true,
       this.readOnly,
-      this.borderRadius});
+      this.borderRadius,
+      this.onChanged});
   final TextEditingController? controller;
   final Widget? prefixIcon, prefix;
   final Widget? suffixIcon;
@@ -40,6 +41,7 @@ class CustomTextFormFiled extends StatelessWidget {
   final FocusNode? focusNode;
   final TextInputType? keyboardType;
   final void Function(String)? onFieldSubmitted;
+  final void Function(String)? onChanged;
   final bool? enabled;
   final String? Function(String?)? validator;
   final TextInputAction? textInputAction;
@@ -63,6 +65,7 @@ class CustomTextFormFiled extends StatelessWidget {
       onTapOutside: (event) {
         FocusManager.instance.primaryFocus?.unfocus();
       },
+      onChanged: onChanged,
       onFieldSubmitted: onFieldSubmitted,
       controller: controller,
       focusNode: focusNode,
