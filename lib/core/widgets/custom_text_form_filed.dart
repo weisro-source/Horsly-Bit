@@ -104,14 +104,14 @@ class CustomTextFormFiled extends StatelessWidget {
           ),
         ),
         errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(borderRadius ?? 4),
+          borderRadius: BorderRadius.circular(borderRadius ?? 10),
           borderSide: const BorderSide(
             color: AppColors.redColor,
             width: 1,
           ),
         ),
         focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(borderRadius ?? 4),
+          borderRadius: BorderRadius.circular(borderRadius ?? 10),
           borderSide: const BorderSide(
             color: AppColors.redColor,
             width: 1,

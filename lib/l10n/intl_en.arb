@@ -12,5 +12,9 @@
     "min15Characters": "Minimum 15 characters",
     "atLeastOneLetter": "At least 1 letter",
     "atLeastOneNumber": "At least 1 number",
-    "atLeastOneSpecialChar": "At least 1 special character"
+    "atLeastOneSpecialChar": "At least 1 special character",
+    "country": "Country",
+    "selectCountryOfResidence": "Select country of your residence.",
+    "selectCountry": "Select country",
+    "countryNotListed": "Don’t see your country on the list?"
 }

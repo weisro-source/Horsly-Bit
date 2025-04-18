@@ -35,6 +35,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "At least 1 special character",
     ),
     "continueButton": MessageLookupByLibrary.simpleMessage("Continue"),
+    "country": MessageLookupByLibrary.simpleMessage("Country"),
+    "countryNotListed": MessageLookupByLibrary.simpleMessage(
+      "Don’t see your country on the list?",
+    ),
     "createAccount": MessageLookupByLibrary.simpleMessage("Create account"),
     "createStrongPassword": MessageLookupByLibrary.simpleMessage(
       "Create a strong password",
@@ -52,6 +56,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "password": MessageLookupByLibrary.simpleMessage("Password"),
     "passwordRequirements": MessageLookupByLibrary.simpleMessage(
       "Password must contain:",
+    ),
+    "selectCountry": MessageLookupByLibrary.simpleMessage("Select country"),
+    "selectCountryOfResidence": MessageLookupByLibrary.simpleMessage(
+      "Select country of your residence.",
     ),
     "yourEmail": MessageLookupByLibrary.simpleMessage("Your Email"),
   };

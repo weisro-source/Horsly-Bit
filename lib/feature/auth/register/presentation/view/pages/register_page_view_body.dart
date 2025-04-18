@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:horsly_bit/core/assets_path/icons_path.dart';
 import 'package:horsly_bit/core/theme/app_colors.dart';
@@ -30,6 +28,13 @@ class _RegisterPageViewBodyState extends State<RegisterPageViewBody> {
     }
   }
 
+  void _previousPage() {
+    if (_currentPage != 0) {
+      _pageController.previousPage(
+          duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -54,7 +59,16 @@ class _RegisterPageViewBodyState extends State<RegisterPageViewBody> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    32.kw,
+                    Visibility(
+                      visible: _currentPage != 0,
+                      child: Padding(
+                        padding: const EdgeInsetsDirectional.only(start: 5),
+                        child: IconButtonWithSvg(
+                          iconSvg: IconsPath.iconsLeftArrow,
+                          onPressed: _previousPage,
+                        ),
+                      ),
+                    ),
                     // Progress Bar
                     SizedBox(
                       height: 4,
@@ -114,6 +128,7 @@ class _RegisterPageViewBodyState extends State<RegisterPageViewBody> {
                             32.kh,
                             if (_currentPage == 0) const EmailFormWidget(),
                             if (_currentPage == 1) const PasswordFormWidget(),
+                            if (_currentPage == 2) const SelectedCountry(),
                             const Spacer(),
                             MainAppButton(
                               onPressed: _nextPage,
@@ -158,15 +173,15 @@ class EmailFormWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         TitleSectionInAuthPage(
-          title: S.of(context).password,
+          title: S.of(context).createAccount,
         ),
         12.kh,
         BodySectionAuthPage(
-          body: S.of(context).createStrongPassword,
+          body: S.of(context).enterEmailAddress,
         ),
         24.kh,
         CustomTextFormFiled(
-          hintText: S.of(context).enterPassword,
+          hintText: S.of(context).enterEmailAddress,
           borderColor: AppColors.lightGrayAppColor,
           topPadding: 0,
           bottomPadding: 0,
@@ -200,31 +215,8 @@ class _PasswordFormWidgetState extends State<PasswordFormWidget> {
     });
   }
 
-  String _generateSecurePassword() {
-    const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const numbers = '0123456789';
-    const special = '!@#\$%^&*(),.?":{}|<>';
-    const all = letters + numbers + special;
-
-    final rand = Random.secure();
-    String getRand(String chars) => chars[rand.nextInt(chars.length)];
-
-    // Ensure all types included
-    String password = getRand(letters) + getRand(numbers) + getRand(special);
-
-    // Fill the rest randomly
-    while (password.length < 15) {
-      password += getRand(all);
-    }
-
-    // Shuffle the password
-    List<String> chars = password.split('');
-    chars.shuffle(rand);
-    return chars.join();
-  }
-
   void _onGeneratePassword() {
-    final generatedPassword = _generateSecurePassword();
+    final generatedPassword = HelperFunctions.generateSecurePassword();
     _passwordController.text = generatedPassword;
     _validatePassword(generatedPassword);
   }
@@ -318,6 +310,65 @@ class TitleSectionInAuthPage extends StatelessWidget {
     return Text(
       title,
       style: AppTextStyle.style20w600Black(context),
+    );
+  }
+}
+
+class SelectedCountry extends StatelessWidget {
+  const SelectedCountry({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        TitleSectionInAuthPage(
+          title: S.of(context).selectCountry,
+        ),
+        12.kh,
+        BodySectionAuthPage(
+          body: S.of(context).selectCountryOfResidence,
+        ),
+        24.kh,
+        Container(
+          height: HelperFunctions.getScreenHight(context) * 0.07,
+          width: HelperFunctions.getScreenWidth(context),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: AppColors.lightGrayAppColor),
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsetsDirectional.only(start: 16),
+                child: Text(
+                  S.of(context).selectCountry,
+                  style: AppTextStyle.style16w400Black(context),
+                ),
+              ),
+              const Spacer(),
+              Padding(
+                padding: const EdgeInsetsDirectional.only(end: 16),
+                child: IconButtonWithSvg(
+                  iconSvg: IconsPath.iconsChevronDown,
+                  onPressed: () {},
+                ),
+              )
+            ],
+          ),
+        ),
+        12.kh,
+        Center(
+          child: TextButton(
+            onPressed: () {},
+            child: Text(
+              S.of(context).countryNotListed,
+              style: AppTextStyle.style15w600Black(context).copyWith(
+                decoration: TextDecoration.underline,
+              ),
+            ),
+          ),
+        )
+      ],
     );
   }
 }

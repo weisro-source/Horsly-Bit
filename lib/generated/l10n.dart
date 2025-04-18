@@ -179,6 +179,41 @@ class S {
       args: [],
     );
   }
+
+  /// `Country`
+  String get country {
+    return Intl.message('Country', name: 'country', desc: '', args: []);
+  }
+
+  /// `Select country of your residence.`
+  String get selectCountryOfResidence {
+    return Intl.message(
+      'Select country of your residence.',
+      name: 'selectCountryOfResidence',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select country`
+  String get selectCountry {
+    return Intl.message(
+      'Select country',
+      name: 'selectCountry',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don’t see your country on the list?`
+  String get countryNotListed {
+    return Intl.message(
+      'Don’t see your country on the list?',
+      name: 'countryNotListed',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
